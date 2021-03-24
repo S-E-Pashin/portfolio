@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Сайт портфолио</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="fonts/opensanslight.woff2" rel="preload" as="font" crossorigin="anonymous">
+  <link href="fonts/opensans.woff2" rel="preload" as="font" crossorigin="anonymous">
+  <link href="fonts/opensansbold.woff2" rel="preload" as="font" crossorigin="anonymous">
+</head>
+<body class="body">
+  <header class="header">
+    <div class="main-nav">
+      <div class="main-nav__switch-wrapper">
+        <button class="main-nav__switch" type="button">
+          <span class="main-nav__switch-img main-nav__switch-img--open"></span>
+        </button>
+      </div>
+      <ul class="main-nav__list">
+        <li class="main-nav__item"><a href="#about" class="main-nav__link">Обо мне</a></li>
+        <li class="main-nav__item"><a href="#skills" class="main-nav__link">Навыки</a></li>
+        <li class="main-nav__item"><a href="#projects" class="main-nav__link">Проекты</a></li>
+        <li class="main-nav__item"><a href="#contacts" class="main-nav__link">Контакты</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="main">
+    <h1 class="visually_hidden">Сайт портфолио</h1>
+    <section class="about main__section" id="about">
+      <h2 class="main__heading about__heading">Обо мне</h2>
+      <p class="about__greeting">Привет меня зовут Сергей и мне нравится создавать интерфейсы.</p>
+      <p class="about__info">Кроме того, имею финансово эффективный опыт взаимодействия с ключевыми клиентами малого, среднего и
+        крупного бизнеса на всех этапах продаж от определения потребности до закрытия сделки и удержания.
+      </p>
+      <p class="about__text">
+        <span>Ниже ты найдешь информацию о моих скилах и проекты которые я реализовал.</span>
+        <span>Буду рад обсудить возможные варианты сотрудничества.</span>
+      </p>
+    </section>
+    <section class="skills main__section" id="skills">
+      <h2 class="main__heading">Навыки</h2>
+      <p class="skills__text">
+        Технологии применяемые мной на практике
+      </p>
+      <ul class="skills__list">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>Grid</li>
+        <li>Flexbox</li>
+        <li>БЭМ</li>
+        <li>Git</li>
+        <li>Gulp</li>
+        <li>Less</li>
+        <li>Sass|Scss</li>
+        <li>JS</li>
+        <li>Webpack</li>
+        <li>DRY</li>
+        <li>EMMET</li>
+        <li>Адаптивная верстка</li>
+        <li>node.js-npm</li>
+        <li>Mobile first</li>
+        <li>Desktop first</li>
+      </ul>
+
+    </section>
+    <section class="main__section projects" id="projects">
+      <h2 class="projects__heading main__heading">Проекты</h2>
+      <div class="projects__field">
+
+        <article class="card">
+        <div class="card__header">
+          <h3 class="card__heading">Bicycle</h3>
+          <div class="card__img">
+            <picture>
+<!--              <source type="image/webp" media="(min-width: 1024px)" srcset="img/bike-desktop_1x.webp 1x, img/bike-desktop_2x.webp 2x">-->
+<!--              <source type="image/webp" media="(min-width: 768px)" srcset="img/bike-tablet_1x.webp 1x, img/bike-tablet_2x.webp 2x">-->
+              <source type="image/webp" media="(min-width: 320px)" srcset="img/bike-mobile_1x.webp 1x, img/bike-mobile_2x.webp 2x">
+<!--              <source type="image/webp" srcset="img/bike-desktop_1x.webp 1x, img/bike-desktop_2x.webp 2x">-->
+<!--              <source media="(min-width: 1024px)" srcset="img/bike-desktop_1x.jpg 1x, img/bike-desktop_2x.jpg 2x">-->
+<!--              <source media="(min-width: 768px)" srcset="img/bike-tablet_1x.jpg 1x, img/bike-tablet_2x.jpg 2x">-->
+              <source media="(min-width: 320px)" srcset="img/bike-mobile_1x.jpg 1x, img/bike-mobile_2x.jpg 2x">
+              <!-- 1х: 278px; 2x: 556px -->
+              <img src="img/bike-mobile_1x.jpg" srcset="img/bike-mobile_2x.jpg 2x" width="278" height="124" alt="Главное изображение для сайта Велосипеды">
+            </picture>
+          </div>
+
+<!--          <img src="img/bike-mobile.jpg" width="278" height="124" alt="Главное изображение для сайта Велосипеды">-->
+          <a href="#" target="_blank" class="card__link">Ссылка на опубликованный проект </a>
+          <a href="https://github.com/S-E-Pashin/Bicycle" target="_blank" class="card__link">Исходник проекта - Git</a>
+        </div>
+        <div class="card__main">
+          <h4>Примененные технологии</h4>
+          <ul class="card__skills">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Grid</li>
+            <li>Flexbox</li>
+            <li>БЭМ</li>
+            <li>Git</li>
+            <li>Gulp</li>
+            <li>Sass|Scss</li>
+            <li>JS</li>
+            <li>Desktop first</li>
+            <li>Адаптивная верстка</li>
+          </ul>
+        </div>
+      </article>
+
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <section class="contacts" id="contacts">
+      <h2 class="main__heading">Контакты</h2>
+      <div class="contacts__mail">
+        <a href="mailto:S.E.Pashin@yandex.ru" class="contacts__text">
+          S.E.Pashin@yandex.ru
+        </a>
+      </div>
+    </section>
+  </footer>
+  <script src="js/bundle.js"></script>
+</body>
+</html>

@@ -1,0 +1,327 @@
+.main-nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  width: 100%;
+
+  @media (max-width: $tablet_max) {
+    //width: 100%;
+  }
+
+  @media (min-width: $tablet_min) {
+    //width: 100%;
+    //margin: 0 -5px 0 -5px;
+    //background-color: red;
+  }
+}
+
+.main-nav--close {
+
+}
+
+.main-nav__switch-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  margin-top: 1px;
+  margin-bottom: 5px;
+
+  @media (min-width: $tablet_min) {
+    display: none;
+  }
+}
+
+.main-nav__switch {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 65px;
+  height: 38px;
+  border-bottom: 2px solid $bg_main_color;
+  border-right: 2px solid $bg_main_color;
+  border-top: 1px solid $text_five_color;
+  border-left: 2px solid $text_five_color;
+  background-color: $bg_third_color;
+  opacity: 0.7;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.main-nav__switch-img {
+  position: relative;
+  width: 32px;
+  height: 2px;
+  background-color: $text_second_color;
+  margin-bottom: 8px;
+
+  &:after {
+    content: "";
+    position: absolute;
+    width: 32px;
+    height: 2px;
+    top: 8px;
+    left: 0;
+    background-color: $text_second_color;
+  }
+}
+
+//Поворот бургера в стрелку
+
+@keyframes open-main {
+  0% {
+    width: 32px;
+    height: 2px;
+    margin-bottom: 8px;
+  }
+
+  100% {
+    width: 24px;
+    margin-right: 5px;
+    margin-bottom: 8px;
+    transform: rotate(45deg) translateX(5px);
+  }
+}
+
+@keyframes open-after {
+  0% {
+    width: 32px;
+    height: 2px;
+    top: 8px;
+    left: 0;
+  }
+  100% {
+    width: 24px;
+    height: 2px;
+    top: 8px;
+    left: 0;
+    transform: rotate(-90deg) translateX(8px);
+  }
+}
+
+//Поворот стрелки в бургер
+
+@keyframes close-main {
+  0% {
+    width: 24px;
+    margin-right: 5px;
+    margin-bottom: 8px;
+    transform: rotate(45deg) translateX(5px);
+  }
+
+  100% {
+    width: 32px;
+    height: 2px;
+    margin-bottom: 8px;
+  }
+}
+
+@keyframes close-after {
+  0% {
+    width: 24px;
+    height: 2px;
+    top: 8px;
+    left: 0;
+    transform: rotate(-90deg) translateX(8px);
+  }
+  100% {
+    width: 32px;
+    height: 2px;
+    top: 8px;
+    left: 0;
+  }
+}
+
+.main-nav__switch-img--open {
+  animation-name: open-main;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.main-nav__switch-img--open:after {
+  animation-name: open-after;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+
+.main-nav__switch-img--close {
+  animation-name: close-main;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.main-nav__switch-img--close:after {
+  animation-name: close-after;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.main-nav__list {
+  align-self: start;
+  list-style: none;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  transition-property: background-color;
+  transition-duration: 2s;
+
+  @media (min-width: $tablet_min) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    align-self: auto;
+    //margin-left: -5px;
+    margin: 0 -5px 0 -5px;
+    //width: calc(100% + 10px);
+    //background-color: green;
+  }
+}
+
+.main-nav__list--close > li {
+  &:nth-child(n) {
+    transform: scale(0);
+    visibility: hidden;
+    opacity: 0;
+    min-height: 0;
+    margin: 0;
+    //overflow: hidden;
+
+  }
+
+  &:nth-child(1) {
+    transition: opacity 1.5s, visibility 1.5s, transform 1.5s, margin 1.5s, height 5s;
+  }
+
+  &:nth-child(2) {
+    transition: opacity 2s, visibility 2s, transform 2s, margin 2s;
+  }
+
+  &:nth-child(3) {
+    transition: opacity 2.5s, visibility 2.5s, transform 2.5s, margin 2.5s;
+  }
+
+  &:nth-child(4) {
+    transition: opacity 3s, visibility 3s, transform 3s, margin 3s;
+  }
+
+  @media (min-width: $tablet_min) {
+    &:nth-child(n) {
+      transform: scale(1);
+      visibility: visible;
+      width: fit-content;
+      opacity: 0.7;
+      height: auto;
+      //margin-bottom: 5px;
+      margin: 0 0 10px 10px;
+
+    }
+
+  }
+}
+
+.main-nav__list--open > li {
+  &:nth-child(n) {
+    transform: scale(1);
+    visibility: visible;
+    opacity: 0.7;
+    height: auto;
+    margin-bottom: 5px;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &:nth-child(1) {
+    //transition: opacity 0.5s, visibility 0.5s, transform 0.5s, margin 0.5s;
+    transition: opacity 2s, visibility 2s, transform 2s, margin 2s;
+  }
+
+  &:nth-child(2) {
+    //transition: opacity 1s, visibility 1s, transform 1s, margin 1s;
+    transition: opacity 1.5s, visibility 1.5s, transform 1.5s, margin 1.5s;
+  }
+
+  &:nth-child(3) {
+    transition: opacity 1s, visibility 2s, transform 1s, margin 1s;
+    //transition: opacity 1.5s, visibility 1.5s, transform 1.5s, margin 1.5s;
+  }
+
+  &:nth-child(4) {
+    transition: opacity 0.5s, visibility 4.5s, transform 0.5s, margin 0.5s;
+    //transition: opacity 2s, visibility 2s, transform 2s, margin 2s;
+  }
+}
+
+
+
+.main-nav__item {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  width: 100%;
+  min-height: 38px;
+  margin-bottom: 5px;
+  background-color: $bg_third_color;
+  background-image: url("../img/icon-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: right 20px center;
+  border-bottom: 2px solid $bg_main_color;
+  border-right: 2px solid $bg_main_color;
+  border-top: 1px solid $text_five_color;
+  border-left: 2px solid $text_five_color;
+
+  opacity: 0.7;
+
+
+  &:hover {
+    opacity: 1;
+    //display: none;
+  }
+
+  @media (min-width: $tablet_min) {
+    flex-grow: 1;
+    width: fit-content;
+    background-image: none;
+    //border-radius: 5px;
+    //margin: 0 5px 10px 5px;
+    margin: 0 0 10px 10px;
+  }
+}
+
+.main-nav__item--close {
+  transition-property: height;
+  transition-duration: 5s;
+  height: 0;
+}
+
+
+.main-nav__link {
+  padding: 10px 10px 10px 30px;
+  //padding-left: 30px;
+  width: 100%;
+
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 400;
+  text-align: left;
+  color: $text_second_color;
+
+  @media (min-width: $tablet_min) {
+    padding: 10px 30px 10px 30px;
+    text-align: center;
+  }
+
+  //background-color: red;
+}

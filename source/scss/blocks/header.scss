@@ -1,0 +1,31 @@
+.header {
+  min-width: $mobile_min;
+  min-height: 60px;
+  margin-bottom: 15px;
+  //background-color: $bg_first_color;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  background-color: $bg_second_color;
+  //width: 100%;
+
+  //@media (max-width: $tablet_max) {
+  //
+  //  //&--js {
+  //  //  height: 100%;
+  //  //  position: fixed;
+  //  //  z-index: 100;
+  //  //}
+  //}
+
+  @media (min-width: $tablet_min) {
+    //justify-content: center;
+    min-height: 50px;
+
+    margin: 0 0 10px -10px;
+
+  }
+}
+
+
