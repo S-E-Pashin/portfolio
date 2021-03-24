@@ -3,12 +3,9 @@
   min-width: 284px;
   max-width: 320px;
   margin: 0 15px 30px 15px;
-  //margin: 15px auto;
-  //margin-bottom: 30px;
   border: 2px solid $border_50;
   border-radius: 5px;
   background-color: $bg_second_color;
-  //flex-grow: 2;
 
   &:hover {
     border: 2px solid $border_100;
@@ -36,11 +33,6 @@
   width: 278px;
   height: 124px;
   background-color: $bg_third_color;
-
-  //@media (min-width: $tablet_min) {
-  //  width: 767px;
-  //  height: 340px;
-  //}
 }
 
 .card__header a {
@@ -68,7 +60,6 @@
   font-weight: 400;
   text-align: center;
   color: $text_five_color;
-  //background-color: red;
 }
 
 .card__skills {
@@ -78,7 +69,6 @@
   align-items: center;
   flex-wrap: wrap;
   list-style: none;
-  //width: 89vw;
   width: 100%;
   margin: 0 auto;
   padding: 0;

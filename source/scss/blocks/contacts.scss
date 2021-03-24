@@ -6,11 +6,6 @@
   min-width: 288px;
   min-height: 169px;
   width: 91vw;
-  //background-color: red;
-
-  @media (min-width: $tablet_min) {
-    //flex-direction: row;
-  }
 }
 
 .contacts h2 {
@@ -25,12 +20,7 @@
   flex-wrap: wrap;
   min-width: 254px;
   margin-top: 30px;
-  //background-color: green;
 }
-
-//.contacts__mail-icon {
-//  height: 20px;
-//}
 
 .contacts a {
   min-height: 20px;

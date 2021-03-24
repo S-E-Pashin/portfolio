@@ -4,20 +4,6 @@
   justify-content: start;
   align-items: center;
   width: 100%;
-
-  @media (max-width: $tablet_max) {
-    //width: 100%;
-  }
-
-  @media (min-width: $tablet_min) {
-    //width: 100%;
-    //margin: 0 -5px 0 -5px;
-    //background-color: red;
-  }
-}
-
-.main-nav--close {
-
 }
 
 .main-nav__switch-wrapper {
@@ -130,6 +116,7 @@
     left: 0;
     transform: rotate(-90deg) translateX(8px);
   }
+
   100% {
     width: 32px;
     height: 2px;
@@ -169,7 +156,6 @@
   width: 100%;
   margin: 0;
   padding: 0;
-
   transition-property: background-color;
   transition-duration: 2s;
 
@@ -180,10 +166,7 @@
     align-items: center;
     flex-wrap: wrap;
     align-self: auto;
-    //margin-left: -5px;
     margin: 0 -5px 0 -5px;
-    //width: calc(100% + 10px);
-    //background-color: green;
   }
 }
 
@@ -194,8 +177,6 @@
     opacity: 0;
     min-height: 0;
     margin: 0;
-    //overflow: hidden;
-
   }
 
   &:nth-child(1) {
@@ -221,11 +202,8 @@
       width: fit-content;
       opacity: 0.7;
       height: auto;
-      //margin-bottom: 5px;
       margin: 0 0 10px 10px;
-
     }
-
   }
 }
 
@@ -243,27 +221,21 @@
   }
 
   &:nth-child(1) {
-    //transition: opacity 0.5s, visibility 0.5s, transform 0.5s, margin 0.5s;
     transition: opacity 2s, visibility 2s, transform 2s, margin 2s;
   }
 
   &:nth-child(2) {
-    //transition: opacity 1s, visibility 1s, transform 1s, margin 1s;
     transition: opacity 1.5s, visibility 1.5s, transform 1.5s, margin 1.5s;
   }
 
   &:nth-child(3) {
     transition: opacity 1s, visibility 2s, transform 1s, margin 1s;
-    //transition: opacity 1.5s, visibility 1.5s, transform 1.5s, margin 1.5s;
   }
 
   &:nth-child(4) {
     transition: opacity 0.5s, visibility 4.5s, transform 0.5s, margin 0.5s;
-    //transition: opacity 2s, visibility 2s, transform 2s, margin 2s;
   }
 }
-
-
 
 .main-nav__item {
   display: flex;
@@ -281,21 +253,16 @@
   border-right: 2px solid $bg_main_color;
   border-top: 1px solid $text_five_color;
   border-left: 2px solid $text_five_color;
-
   opacity: 0.7;
-
 
   &:hover {
     opacity: 1;
-    //display: none;
   }
 
   @media (min-width: $tablet_min) {
     flex-grow: 1;
     width: fit-content;
     background-image: none;
-    //border-radius: 5px;
-    //margin: 0 5px 10px 5px;
     margin: 0 0 10px 10px;
   }
 }
@@ -306,12 +273,9 @@
   height: 0;
 }
 
-
 .main-nav__link {
   padding: 10px 10px 10px 30px;
-  //padding-left: 30px;
   width: 100%;
-
   font-size: 18px;
   line-height: 18px;
   font-weight: 400;
@@ -322,6 +286,4 @@
     padding: 10px 30px 10px 30px;
     text-align: center;
   }
-
-  //background-color: red;
 }
